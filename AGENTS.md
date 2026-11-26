@@ -74,6 +74,14 @@ cut, fade, wipe_left, iris, whip_left, whip_right, zoom_push
 
 whoosh, thud, pop, ding, gasp, slam, footstep, door_knock, chai_pour, cricket_hit, applause, bell_chime
 
+## Valid Backgrounds (20)
+
+neighborhood_street, forest_trail, city_street, rooftop_night, cozy_living_room, cafe_diner, office_desk, classroom, laboratory, police_precinct, podcast_studio, tv_studio, studio_backdrop, lahore_courtyard, chai_dhaba, badshahi_mosque_square, karachi_bazaar, hunza_valley, pakistani_truck_highway
+
+## Character Presets (13)
+
+char_rookie_officer (Officer Marcus, am_michael), char_lab_scientist (Dr. Elena Vance, af_heart), char_detective_noir (Detective Miller, am_adam), char_street_skater (Maya Lin, af_bella), char_british_host (Arthur Pendelton, bm_george), char_emma_anchor (Emma Sterling, bf_emma), char_fenrir_bouncer (Viktor Kane, am_fenrir), char_nicole_producer (Nicole Mercer, af_nicole), char_basic_clean (Basic Character, am_eric), char_zainab_pakistani (Zainab Tariq, af_sarah), char_hamza_pakistani (Hamza Abbasi, bm_lewis), char_bilal_lahori (Ustad Bilal, am_liam), char_ayesha_punjabi (Ayesha Malik, bf_isabella)
+
 ## Valid Emotions (17)
 
 scared, happy, sad, angry, surprised, disgusted, confident, determined, confused, suspicious, excited, nervous, embarrassed, bored, curious, frustrated, smug
@@ -85,6 +93,39 @@ idle, walk, run, sprint, jump, point, wave, shrug, lean_in, think_chin, nod_agre
 ## Kokoro Voices (13)
 
 am_michael, af_heart, am_adam, af_bella, bm_george, bf_emma, am_fenrir, af_nicole, bm_lewis, am_eric, af_sarah, bf_isabella, am_liam
+
+## New Tools (added in latest engine update)
+
+- `tools/story_arc_planner.py` — Offline story-to-script compiler (no LLM needed). Parses screenplays or plain text into ProductionScript JSON with auto voice pairing, camera shots, transitions, SFX.
+- `tools/blender_export.py` — Blender bpy armature + lip-sync + VSE export. Creates .blend files with cel-shaded rigs, camera keyframes, audio strips.
+- `tools/check_tools.py` — Environment preflight checker. Run `python tools/check_tools.py` to see what's installed/missing.
+
+## New Studio Components (added in latest engine update)
+
+- `src/studio/MusicStudioPanel.tsx` — UI for generating procedural music tracks and SFX, download as WAV, preview in browser
+- `src/studio/TimelineAnnotations.tsx` — Add text notes to specific frames on the production timeline, color-coded, resolvable
+- `src/engine/audio/` — `musicEngine.ts` (procedural music, 5 moods), `sfxEngine.ts` (deterministic WAV SFX), `browserAudio.ts` (Web Audio playback)
+
+## New Equipment Asset IDs (Pakistani-themed)
+
+- Hair: hair_pakistani_parted, hair_pakistani_paranda
+- Facial Hair: beard_maulana_sunnah, mustache_pahelwan
+- Upper Body: shalwar_kameez_top, kurta_embroidered, waistcoat_pakistani, sherwani_royal, anarkali_frock, pathani_suit
+- Lower Body: shalwar_trousers, gharara_sharara, churidar_pajama
+- Footwear: peshawari_chappal, khussa_embroidered, kolhapuri_chappal
+- Headwear: pakol_cap, jinnah_cap, sindhi_topi, turban_pagri, dupatta_head_drape, dupatta_hijab
+- Piercing: jhumka_ear_l, jhumka_ear_r, nath_nose_stud, maang_tikka
+- Accessory: ajrak_shawl, truck_art_satchel, bangles_chooriyan
+- Prop: chai_kulhad, cricket_bat_pak, chai_ketli, dhol_drum, tasbih_beads
+- Tattoo: tat_mehndi_henna
+
+## New SFX Types (added)
+
+chai_pour, cricket_hit, applause, bell_chime (in addition to whoosh, thud, pop, ding, gasp, slam, footstep, door_knock)
+
+## New Voices (added)
+
+am_liam (warm steady male), af_sarah (clear articulate female), bf_isabella (warm British female), bm_lewis (British composed male) — in addition to the original 9
 
 ## Memory
 
