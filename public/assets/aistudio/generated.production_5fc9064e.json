@@ -1,0 +1,548 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "prod_rooftop_panic_001",
+  "title": "Locked on the Rooftop",
+  "aspectRatio": "9:16",
+  "fps": 30,
+  "characters": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "char_street_skater",
+      "name": "Kai \"Spark\" Vega",
+      "description": "Energetic urban courier with street gear and custom ink.",
+      "body": {
+        "height": 0.98,
+        "headSize": 1.06,
+        "shoulderWidth": 0.96,
+        "torsoLength": 1.0,
+        "armLength": 1.0,
+        "legLength": 1.0,
+        "handSize": 1.0,
+        "footSize": 1.0,
+        "bodyThickness": 0.94,
+        "neckThickness": 1.0,
+        "limbThickness": 0.96,
+        "headShape": "chiseled",
+        "skinColor": "#C68C63",
+        "outlineColor": "#18181B",
+        "outlineWidth": 2.6
+      },
+      "face": {
+        "eyeStyle": "sharp_narrow",
+        "eyeColor": "#3A2618",
+        "browStyle": "thin_sharp",
+        "noseStyle": "button",
+        "earStyle": "gauged",
+        "mouthStyle": "procedural",
+        "freckles": false,
+        "mole": "none",
+        "blush": 0,
+        "darkCircles": false,
+        "eyeBags": false,
+        "wrinkles": false,
+        "splitEyebrow": "left",
+        "missingTooth": false,
+        "crookedTeeth": false,
+        "dimples": false,
+        "facePaint": "none",
+        "scars": [{ "id": "scar_1", "location": "right_cheek", "angle": -24, "size": 0.9, "color": "#A36646" }]
+      },
+      "equipment": {
+        "hair": "hair_spiky",
+        "facialHair": "goatee",
+        "headwear": "beanie",
+        "eyewear": "sunglasses",
+        "upperBody": "hoodie",
+        "lowerBody": "cargo_pants",
+        "footwear": "sneakers",
+        "piercings": ["eyebrow_ring", "ear_hoop"],
+        "tattoos": [
+          { "assetId": "tattoo_tribal_band", "surface": "forearm_l", "color": "#1F3A3D", "scale": 1 },
+          { "assetId": "tattoo_lightning", "surface": "neck", "color": "#1F3A3D", "scale": 0.9 }
+        ],
+        "accessories": ["gold_chain", "backpack"],
+        "propLeft": "none",
+        "propRight": "smartphone",
+        "colorOverrides": {
+          "hair": { "main": "#1C1D24", "secondary": "#2E3240", "highlight": "#38BDF8" },
+          "headwear": { "main": "#D97706", "secondary": "#B45309" },
+          "upperBody": { "main": "#1E293B", "secondary": "#0F172A", "highlight": "#38BDF8" }
+        }
+      }
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "char_detective_noir",
+      "name": "Inspector Harlan",
+      "description": "Cynical veteran investigator who never leaves the case cold.",
+      "body": {
+        "height": 1.08,
+        "headSize": 0.98,
+        "shoulderWidth": 1.15,
+        "torsoLength": 1.05,
+        "armLength": 1.0,
+        "legLength": 1.0,
+        "handSize": 1.0,
+        "footSize": 1.0,
+        "bodyThickness": 1.12,
+        "neckThickness": 1.0,
+        "limbThickness": 1.08,
+        "headShape": "square",
+        "skinColor": "#E5BA9C",
+        "outlineColor": "#18181B",
+        "outlineWidth": 2.6
+      },
+      "face": {
+        "eyeStyle": "heavy_lidded",
+        "eyeColor": "#52525B",
+        "browStyle": "bushy",
+        "noseStyle": "aquiline",
+        "earStyle": "round",
+        "mouthStyle": "procedural",
+        "freckles": false,
+        "mole": "none",
+        "blush": 0,
+        "darkCircles": true,
+        "eyeBags": false,
+        "wrinkles": true,
+        "splitEyebrow": "none",
+        "missingTooth": false,
+        "crookedTeeth": false,
+        "dimples": false,
+        "facePaint": "none",
+        "scars": [{ "id": "scar_2", "location": "left_brow", "angle": 18, "size": 1.1, "color": "#B07B5F" }]
+      },
+      "equipment": {
+        "hair": "hair_slick_back",
+        "facialHair": "stubble",
+        "headwear": "fedora",
+        "eyewear": "none",
+        "upperBody": "raincoat",
+        "lowerBody": "formal_trousers",
+        "footwear": "formal_shoes",
+        "piercings": [],
+        "tattoos": [],
+        "accessories": ["necktie", "watch_001"],
+        "propLeft": "none",
+        "propRight": "coffee_cup",
+        "colorOverrides": {
+          "hair": { "main": "#4B5563", "secondary": "#6B7280", "highlight": "#9CA3AF" },
+          "upperBody": { "main": "#786B59", "secondary": "#574C3F", "highlight": "#9C8C75" },
+          "headwear": { "main": "#44403C", "secondary": "#1C1917" }
+        }
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1_click",
+      "title": "01. The Click",
+      "durationSec": 5.0,
+      "background": "rooftop_night",
+      "transitionIn": "fade",
+      "transitionDurationSec": 0.35,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.0, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 3.0, "zoom": 1.12, "panX": -10, "panY": 0, "shake": 0.1 },
+        { "timeSec": 5.0, "zoom": 1.18, "panX": -15, "panY": 0, "shake": 0.2 }
+      ],
+      "actors": [
+        {
+          "id": "actor_kai",
+          "characterId": "char_street_skater",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.35, "y": 0.85, "scale": 1.0, "facing": 1 },
+            { "timeSec": 5.0, "x": 0.32, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "stand", "type": "walk", "intensity": 0.8 },
+            { "startSec": 2.5, "endSec": 5.0, "basePose": "stand", "type": "gasp", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "curious": 0.6, "happy": 0.3 }, "faceOverrides": { "brows": "raised", "mouth": "smile" } },
+            { "timeSec": 2.6, "emotion": { "surprised": 0.7, "nervous": 0.4 }, "faceOverrides": { "brows": "raised", "eyes": "wide", "mouth": "open_gasp" } },
+            { "timeSec": 4.5, "emotion": { "scared": 0.5, "confused": 0.6 }, "faceOverrides": { "brows": "worried", "eyes": "wide" } }
+          ]
+        },
+        {
+          "id": "actor_harlan",
+          "characterId": "char_detective_noir",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.65, "y": 0.85, "scale": 1.0, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "stand", "type": "walk", "intensity": 0.7 },
+            { "startSec": 2.5, "endSec": 5.0, "basePose": "stand", "type": "look_around", "intensity": 0.9 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "bored": 0.4, "confident": 0.5 }, "faceOverrides": { "brows": "neutral", "mouth": "smirk" } },
+            { "timeSec": 2.6, "emotion": { "surprised": 0.6, "suspicious": 0.5 }, "faceOverrides": { "brows": "raised", "eyes": "wide" } },
+            { "timeSec": 4.5, "emotion": { "nervous": 0.7, "scared": 0.4 }, "faceOverrides": { "brows": "worried", "mouth": "nervous_smile" } }
+          ]
+        }
+      ],
+      "props": [
+        { "id": "prop_lamp", "type": "street_lamp", "position": { "x": 0.5, "y": 0.3 }, "scale": 1.2 }
+      ],
+      "dialogue": [
+        {
+          "id": "line_1",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "Did you hear that click?",
+          "startSec": 0.4,
+          "endSec": 2.0,
+          "phonemes": [
+            { "startSec": 0.4, "endSec": 0.6, "phoneme": "D" },
+            { "startSec": 0.6, "endSec": 0.9, "phoneme": "B" },
+            { "startSec": 0.9, "endSec": 1.2, "phoneme": "A" },
+            { "startSec": 1.2, "endSec": 1.5, "phoneme": "C" },
+            { "startSec": 1.5, "endSec": 1.8, "phoneme": "F" },
+            { "startSec": 1.8, "endSec": 2.0, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_2",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "That was the rooftop door.",
+          "startSec": 2.3,
+          "endSec": 4.0,
+          "phonemes": [
+            { "startSec": 2.3, "endSec": 2.55, "phoneme": "B" },
+            { "startSec": 2.55, "endSec": 2.8, "phoneme": "A" },
+            { "startSec": 2.8, "endSec": 3.1, "phoneme": "C" },
+            { "startSec": 3.1, "endSec": 3.4, "phoneme": "D" },
+            { "startSec": 3.4, "endSec": 3.7, "phoneme": "E" },
+            { "startSec": 3.7, "endSec": 4.0, "phoneme": "X" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_2_panic",
+      "title": "02. Key Panic",
+      "durationSec": 6.0,
+      "background": "rooftop_night",
+      "transitionIn": "fade",
+      "transitionDurationSec": 0.35,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.0, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 3.0, "zoom": 1.2, "panX": 0, "panY": -10, "shake": 0.15 },
+        { "timeSec": 6.0, "zoom": 1.25, "panX": 10, "panY": -15, "shake": 0.25 }
+      ],
+      "actors": [
+        {
+          "id": "actor_kai",
+          "characterId": "char_street_skater",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.32, "y": 0.85, "scale": 1.0, "facing": 1 },
+            { "timeSec": 6.0, "x": 0.30, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.0, "basePose": "stand", "type": "panic", "intensity": 1.0 },
+            { "startSec": 2.0, "endSec": 4.0, "basePose": "stand", "type": "tremble", "intensity": 0.9 },
+            { "startSec": 4.0, "endSec": 6.0, "basePose": "stand", "type": "gasp", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "scared": 0.7, "nervous": 0.6 }, "faceOverrides": { "brows": "worried", "eyes": "wide", "mouth": "open_gasp" } },
+            { "timeSec": 2.5, "emotion": { "angry": 0.5, "scared": 0.6, "frustrated": 0.7 }, "faceOverrides": { "brows": "angry", "mouth": "grit_teeth" } },
+            { "timeSec": 5.5, "emotion": { "scared": 0.8, "confused": 0.5 }, "faceOverrides": { "brows": "worried", "eyes": "wide" } }
+          ]
+        },
+        {
+          "id": "actor_harlan",
+          "characterId": "char_detective_noir",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.68, "y": 0.85, "scale": 1.0, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.0, "basePose": "stand", "type": "point", "intensity": 1.0 },
+            { "startSec": 2.0, "endSec": 4.0, "basePose": "stand", "type": "shrug", "intensity": 0.9 },
+            { "startSec": 4.0, "endSec": 6.0, "basePose": "stand", "type": "facepalm", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "angry": 0.6, "confused": 0.4 }, "faceOverrides": { "brows": "angry", "mouth": "grit_teeth" } },
+            { "timeSec": 2.5, "emotion": { "surprised": 0.7, "nervous": 0.5 }, "faceOverrides": { "brows": "raised", "eyes": "wide" } },
+            { "timeSec": 5.5, "emotion": { "frustrated": 0.8, "embarrassed": 0.4 }, "faceOverrides": { "brows": "worried", "mouth": "frown" } }
+          ]
+        }
+      ],
+      "props": [
+        { "id": "prop_lamp", "type": "street_lamp", "position": { "x": 0.5, "y": 0.3 }, "scale": 1.2 }
+      ],
+      "dialogue": [
+        {
+          "id": "line_3",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "You brought the key, right?",
+          "startSec": 0.4,
+          "endSec": 2.2,
+          "phonemes": [
+            { "startSec": 0.4, "endSec": 0.65, "phoneme": "B" },
+            { "startSec": 0.65, "endSec": 0.9, "phoneme": "A" },
+            { "startSec": 0.9, "endSec": 1.2, "phoneme": "C" },
+            { "startSec": 1.2, "endSec": 1.5, "phoneme": "D" },
+            { "startSec": 1.5, "endSec": 1.85, "phoneme": "E" },
+            { "startSec": 1.85, "endSec": 2.2, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_4",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "I thought YOU had it!",
+          "startSec": 2.4,
+          "endSec": 4.0,
+          "phonemes": [
+            { "startSec": 2.4, "endSec": 2.65, "phoneme": "B" },
+            { "startSec": 2.65, "endSec": 2.9, "phoneme": "A" },
+            { "startSec": 2.9, "endSec": 3.2, "phoneme": "C" },
+            { "startSec": 3.2, "endSec": 3.5, "phoneme": "D" },
+            { "startSec": 3.5, "endSec": 3.8, "phoneme": "E" },
+            { "startSec": 3.8, "endSec": 4.0, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_5",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "Me?! I'm the intern!",
+          "startSec": 4.2,
+          "endSec": 6.0,
+          "phonemes": [
+            { "startSec": 4.2, "endSec": 4.45, "phoneme": "B" },
+            { "startSec": 4.45, "endSec": 4.7, "phoneme": "A" },
+            { "startSec": 4.7, "endSec": 5.0, "phoneme": "C" },
+            { "startSec": 5.0, "endSec": 5.3, "phoneme": "D" },
+            { "startSec": 5.3, "endSec": 5.65, "phoneme": "E" },
+            { "startSec": 5.65, "endSec": 6.0, "phoneme": "X" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_3_search",
+      "title": "03. Pocket Search",
+      "durationSec": 8.0,
+      "background": "rooftop_night",
+      "transitionIn": "cut",
+      "transitionDurationSec": 0.2,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.1, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 4.0, "zoom": 1.25, "panX": -20, "panY": 0, "shake": 0.2 },
+        { "timeSec": 8.0, "zoom": 1.3, "panX": 15, "panY": -10, "shake": 0.3 }
+      ],
+      "actors": [
+        {
+          "id": "actor_kai",
+          "characterId": "char_street_skater",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.30, "y": 0.85, "scale": 1.0, "facing": 1 },
+            { "timeSec": 8.0, "x": 0.32, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 3.0, "basePose": "stand", "type": "look_around", "intensity": 0.9 },
+            { "startSec": 3.0, "endSec": 6.0, "basePose": "stand", "type": "shrug", "intensity": 0.8 },
+            { "startSec": 6.0, "endSec": 8.0, "basePose": "stand", "type": "facepalm", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "nervous": 0.7, "curious": 0.5 }, "faceOverrides": { "brows": "worried", "eyes": "squint" } },
+            { "timeSec": 3.0, "emotion": { "embarrassed": 0.6, "frustrated": 0.5 }, "faceOverrides": { "brows": "skeptical", "mouth": "pout" } },
+            { "timeSec": 6.0, "emotion": { "scared": 0.8, "sad": 0.4 }, "faceOverrides": { "brows": "worried", "eyes": "wide", "mouth": "frown" } }
+          ]
+        },
+        {
+          "id": "actor_harlan",
+          "characterId": "char_detective_noir",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.70, "y": 0.85, "scale": 1.0, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "stand", "type": "point", "intensity": 1.0 },
+            { "startSec": 2.5, "endSec": 5.5, "basePose": "stand", "type": "look_around", "intensity": 0.9 },
+            { "startSec": 5.5, "endSec": 8.0, "basePose": "stand", "type": "tremble", "intensity": 0.8 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "angry": 0.6, "determined": 0.5 }, "faceOverrides": { "brows": "angry", "mouth": "grit_teeth" } },
+            { "timeSec": 3.0, "emotion": { "scared": 0.6, "confused": 0.5 }, "faceOverrides": { "brows": "worried", "eyes": "wide" } },
+            { "timeSec": 6.0, "emotion": { "frustrated": 0.7, "nervous": 0.6 }, "faceOverrides": { "brows": "worried", "mouth": "frown" } }
+          ]
+        }
+      ],
+      "props": [
+        { "id": "prop_lamp", "type": "street_lamp", "position": { "x": 0.5, "y": 0.3 }, "scale": 1.2 }
+      ],
+      "dialogue": [
+        {
+          "id": "line_6",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "Check your pockets!",
+          "startSec": 0.3,
+          "endSec": 2.0,
+          "phonemes": [
+            { "startSec": 0.3, "endSec": 0.55, "phoneme": "C" },
+            { "startSec": 0.55, "endSec": 0.8, "phoneme": "A" },
+            { "startSec": 0.8, "endSec": 1.1, "phoneme": "B" },
+            { "startSec": 1.1, "endSec": 1.4, "phoneme": "D" },
+            { "startSec": 1.4, "endSec": 1.7, "phoneme": "E" },
+            { "startSec": 1.7, "endSec": 2.0, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_7",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "Wallet, phone, gum... no key.",
+          "startSec": 2.3,
+          "endSec": 4.6,
+          "phonemes": [
+            { "startSec": 2.3, "endSec": 2.6, "phoneme": "B" },
+            { "startSec": 2.6, "endSec": 2.9, "phoneme": "A" },
+            { "startSec": 2.9, "endSec": 3.2, "phoneme": "C" },
+            { "startSec": 3.2, "endSec": 3.5, "phoneme": "D" },
+            { "startSec": 3.5, "endSec": 3.8, "phoneme": "E" },
+            { "startSec": 3.8, "endSec": 4.1, "phoneme": "F" },
+            { "startSec": 4.1, "endSec": 4.4, "phoneme": "G" },
+            { "startSec": 4.4, "endSec": 4.6, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_8",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "Then we're locked up here!",
+          "startSec": 4.9,
+          "endSec": 6.8,
+          "phonemes": [
+            { "startSec": 4.9, "endSec": 5.2, "phoneme": "B" },
+            { "startSec": 5.2, "endSec": 5.5, "phoneme": "A" },
+            { "startSec": 5.5, "endSec": 5.8, "phoneme": "C" },
+            { "startSec": 5.8, "endSec": 6.1, "phoneme": "D" },
+            { "startSec": 6.1, "endSec": 6.45, "phoneme": "E" },
+            { "startSec": 6.45, "endSec": 6.8, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_9",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "Call someone!",
+          "startSec": 7.0,
+          "endSec": 8.0,
+          "phonemes": [
+            { "startSec": 7.0, "endSec": 7.25, "phoneme": "C" },
+            { "startSec": 7.25, "endSec": 7.5, "phoneme": "A" },
+            { "startSec": 7.5, "endSec": 7.75, "phoneme": "B" },
+            { "startSec": 7.75, "endSec": 8.0, "phoneme": "X" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_4_payoff",
+      "title": "04. The Key Was Here",
+      "durationSec": 6.0,
+      "background": "rooftop_night",
+      "transitionIn": "fade",
+      "transitionDurationSec": 0.35,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.15, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 3.0, "zoom": 1.0, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 6.0, "zoom": 1.05, "panX": 0, "panY": 0, "shake": 0 }
+      ],
+      "actors": [
+        {
+          "id": "actor_kai",
+          "characterId": "char_street_skater",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.32, "y": 0.85, "scale": 1.0, "facing": 1 },
+            { "timeSec": 6.0, "x": 0.35, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "stand", "type": "look_around", "intensity": 0.8 },
+            { "startSec": 2.5, "endSec": 4.5, "basePose": "stand", "type": "laugh", "intensity": 1.0 },
+            { "startSec": 4.5, "endSec": 6.0, "basePose": "stand", "type": "celebrate", "intensity": 0.9 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "confused": 0.7, "curious": 0.5 }, "faceOverrides": { "brows": "raised", "eyes": "squint" } },
+            { "timeSec": 2.5, "emotion": { "surprised": 0.8, "happy": 0.6 }, "faceOverrides": { "brows": "raised", "eyes": "wide", "mouth": "open_gasp" } },
+            { "timeSec": 5.0, "emotion": { "happy": 0.9, "smug": 0.5 }, "faceOverrides": { "brows": "raised", "mouth": "grin" } }
+          ]
+        },
+        {
+          "id": "actor_harlan",
+          "characterId": "char_detective_noir",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.68, "y": 0.85, "scale": 1.0, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "stand", "type": "point", "intensity": 1.0 },
+            { "startSec": 2.5, "endSec": 4.5, "basePose": "stand", "type": "shrug", "intensity": 0.9 },
+            { "startSec": 4.5, "endSec": 6.0, "basePose": "stand", "type": "laugh", "intensity": 0.8 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "suspicious": 0.6, "curious": 0.5 }, "faceOverrides": { "brows": "skeptical", "eyes": "squint" } },
+            { "timeSec": 2.5, "emotion": { "surprised": 0.7, "embarrassed": 0.6 }, "faceOverrides": { "brows": "raised", "eyes": "wide", "mouth": "open_gasp" } },
+            { "timeSec": 5.0, "emotion": { "happy": 0.7, "smug": 0.4 }, "faceOverrides": { "brows": "raised", "mouth": "smirk" } }
+          ]
+        }
+      ],
+      "props": [
+        { "id": "prop_lamp", "type": "street_lamp", "position": { "x": 0.5, "y": 0.3 }, "scale": 1.2 }
+      ],
+      "dialogue": [
+        {
+          "id": "line_10",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "Wait... it's in the lock.",
+          "startSec": 0.3,
+          "endSec": 2.6,
+          "phonemes": [
+            { "startSec": 0.3, "endSec": 0.6, "phoneme": "B" },
+            { "startSec": 0.6, "endSec": 0.9, "phoneme": "A" },
+            { "startSec": 0.9, "endSec": 1.2, "phoneme": "C" },
+            { "startSec": 1.2, "endSec": 1.6, "phoneme": "D" },
+            { "startSec": 1.6, "endSec": 2.0, "phoneme": "E" },
+            { "startSec": 2.0, "endSec": 2.3, "phoneme": "F" },
+            { "startSec": 2.3, "endSec": 2.6, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_11",
+          "actorId": "actor_kai",
+          "speakerName": "Kai",
+          "text": "You're kidding me.",
+          "startSec": 2.8,
+          "endSec": 4.5,
+          "phonemes": [
+            { "startSec": 2.8, "endSec": 3.1, "phoneme": "B" },
+            { "startSec": 3.1, "endSec": 3.4, "phoneme": "A" },
+            { "startSec": 3.4, "endSec": 3.7, "phoneme": "C" },
+            { "startSec": 3.7, "endSec": 4.0, "phoneme": "D" },
+            { "startSec": 4.0, "endSec": 4.3, "phoneme": "E" },
+            { "startSec": 4.3, "endSec": 4.5, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_12",
+          "actorId": "actor_harlan",
+          "speakerName": "Harlan",
+          "text": "Comedy gold.",
+          "startSec": 4.7,
+          "endSec": 6.0,
+          "phonemes": [
+            { "startSec": 4.7, "endSec": 5.0, "phoneme": "C" },
+            { "startSec": 5.0, "endSec": 5.3, "phoneme": "A" },
+            { "startSec": 5.3, "endSec": 5.6, "phoneme": "B" },
+            { "startSec": 5.6, "endSec": 5.85, "phoneme": "D" },
+            { "startSec": 5.85, "endSec": 6.0, "phoneme": "X" }
+          ]
+        }
+      ]
+    }
+  ]
+}

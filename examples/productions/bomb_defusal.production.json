@@ -1,0 +1,305 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "prod_bomb_defusal_001",
+  "title": "The Blue Wire Dilemma",
+  "renderStyle": "2.5d_parallax",
+  "aspectRatio": "16:9",
+  "fps": 30,
+  "characters": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "char_police_officer",
+      "name": "Officer Miller",
+      "voice": "am_michael",
+      "body": {
+        "height": 1.04,
+        "headSize": 1.02,
+        "shoulderWidth": 1.12,
+        "torsoLength": 1.0,
+        "armLength": 1.0,
+        "legLength": 1.0,
+        "handSize": 1.0,
+        "footSize": 1.0,
+        "bodyThickness": 1.08,
+        "neckThickness": 1.0,
+        "limbThickness": 1.05,
+        "headShape": "square",
+        "skinColor": "#EFC8AA",
+        "outlineColor": "#18181B",
+        "outlineWidth": 1.45
+      },
+      "face": {
+        "eyeStyle": "almond",
+        "eyeColor": "#3B4D6B",
+        "browStyle": "thick_bold",
+        "noseStyle": "broad",
+        "earStyle": "round",
+        "mouthStyle": "procedural",
+        "freckles": false,
+        "mole": "none",
+        "blush": 0,
+        "darkCircles": false,
+        "eyeBags": true,
+        "wrinkles": false,
+        "splitEyebrow": "none",
+        "missingTooth": false,
+        "crookedTeeth": false,
+        "dimples": false,
+        "facePaint": "none",
+        "scars": []
+      },
+      "equipment": {
+        "hair": "hair_messy_001",
+        "facialHair": "mustache_chevron_001",
+        "headwear": "police_cap_001",
+        "eyewear": "none",
+        "upperBody": "police_uniform_001",
+        "lowerBody": "police_trousers_001",
+        "footwear": "black_boots_001",
+        "piercings": [],
+        "tattoos": [],
+        "accessories": ["watch_001", "radio_001", "belt_utility"],
+        "propLeft": "none",
+        "propRight": "flashlight",
+        "colorOverrides": {
+          "hair": { "main": "#382B24", "secondary": "#4F3E35", "highlight": "#6B5549" },
+          "facialHair": { "main": "#382B24", "secondary": "#4F3E35" }
+        }
+      }
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "char_lab_scientist",
+      "name": "Dr. Elena Vance",
+      "voice": "af_bella",
+      "body": {
+        "height": 0.96,
+        "headSize": 1.04,
+        "shoulderWidth": 0.88,
+        "torsoLength": 1.0,
+        "armLength": 1.0,
+        "legLength": 1.0,
+        "handSize": 1.0,
+        "footSize": 1.0,
+        "bodyThickness": 0.88,
+        "neckThickness": 0.88,
+        "limbThickness": 0.88,
+        "headShape": "oval",
+        "skinColor": "#F7D9C4",
+        "outlineColor": "#18181B",
+        "outlineWidth": 1.45
+      },
+      "face": {
+        "eyeStyle": "large_round",
+        "eyeColor": "#2E6F5E",
+        "browStyle": "arched",
+        "noseStyle": "pointed",
+        "earStyle": "lobed",
+        "mouthStyle": "procedural",
+        "freckles": true,
+        "mole": "none",
+        "blush": 0.2,
+        "darkCircles": false,
+        "eyeBags": false,
+        "wrinkles": false,
+        "splitEyebrow": "none",
+        "missingTooth": false,
+        "crookedTeeth": false,
+        "dimples": false,
+        "facePaint": "none",
+        "scars": []
+      },
+      "equipment": {
+        "hair": "hair_bun",
+        "facialHair": "none",
+        "headwear": "none",
+        "eyewear": "round_glasses",
+        "upperBody": "lab_coat",
+        "lowerBody": "formal_trousers",
+        "footwear": "formal_shoes",
+        "piercings": ["ear_stud"],
+        "tattoos": [],
+        "accessories": ["necktie"],
+        "propLeft": "none",
+        "propRight": "clipboard",
+        "colorOverrides": {
+          "hair": { "main": "#8A3B23", "secondary": "#A84B2F", "highlight": "#C96A4B" },
+          "lowerBody": { "main": "#27303F", "secondary": "#1B222E" }
+        }
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1_tension",
+      "title": "01. Countdown Tension",
+      "durationSec": 4.5,
+      "background": "laboratory",
+      "transitionIn": "fade",
+      "transitionDurationSec": 0.4,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.0, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 3.0, "zoom": 1.18, "panX": 36, "panY": -14, "shake": 0 },
+        { "timeSec": 4.5, "zoom": 1.24, "panX": 44, "panY": -18, "shake": 0.16 }
+      ],
+      "actors": [
+        {
+          "id": "actor_officer",
+          "characterId": "char_police_officer",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.32, "y": 0.85, "scale": 1.0, "facing": 1 },
+            { "timeSec": 3.5, "x": 0.35, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.5, "basePose": "crouch", "type": "tremble", "intensity": 0.7 },
+            { "startSec": 2.5, "endSec": 4.5, "basePose": "crouch", "type": "gasp", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            {
+              "timeSec": 0,
+              "emotion": { "scared": 0.65, "determined": 0.45 },
+              "faceOverrides": { "brows": "worried", "mouth": "nervous_smile" }
+            },
+            {
+              "timeSec": 4.0,
+              "emotion": { "scared": 0.9, "nervous": 0.7, "surprised": 0.4 },
+              "faceOverrides": { "brows": "worried", "eyes": "wide" }
+            }
+          ]
+        },
+        {
+          "id": "actor_scientist",
+          "characterId": "char_lab_scientist",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.74, "y": 0.83, "scale": 0.98, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 2.2, "basePose": "stand", "type": "look_around", "intensity": 0.8 },
+            { "startSec": 2.2, "endSec": 4.5, "basePose": "stand", "type": "point", "intensity": 1.1 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "nervous": 0.6, "confused": 0.4 } },
+            { "timeSec": 2.4, "emotion": { "determined": 0.8, "scared": 0.5 } }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "prop_bomb",
+          "type": "bomb_device",
+          "position": { "x": 0.52, "y": 0.85 },
+          "scale": 1.15,
+          "state": { "countdownSeconds": 12, "armed": true, "wiresCut": [] }
+        }
+      ],
+      "dialogue": [
+        {
+          "id": "line_1",
+          "actorId": "actor_officer",
+          "speakerName": "Officer Miller",
+          "text": "Doctor, both wires look identical under this light!",
+          "startSec": 0.3,
+          "endSec": 2.4,
+          "phonemes": [
+            { "startSec": 0.3, "endSec": 0.55, "phoneme": "B" },
+            { "startSec": 0.55, "endSec": 0.8, "phoneme": "D" },
+            { "startSec": 0.8, "endSec": 1.05, "phoneme": "A" },
+            { "startSec": 1.05, "endSec": 1.35, "phoneme": "E" },
+            { "startSec": 1.35, "endSec": 1.65, "phoneme": "C" },
+            { "startSec": 1.65, "endSec": 1.95, "phoneme": "F" },
+            { "startSec": 1.95, "endSec": 2.25, "phoneme": "B" },
+            { "startSec": 2.25, "endSec": 2.4, "phoneme": "X" }
+          ]
+        },
+        {
+          "id": "line_2",
+          "actorId": "actor_scientist",
+          "speakerName": "Dr. Elena Vance",
+          "text": "Trust the schematic. Cut the blue wire right now!",
+          "startSec": 2.5,
+          "endSec": 4.4,
+          "phonemes": [
+            { "startSec": 2.5, "endSec": 2.75, "phoneme": "B" },
+            { "startSec": 2.75, "endSec": 3.0, "phoneme": "C" },
+            { "startSec": 3.0, "endSec": 3.25, "phoneme": "A" },
+            { "startSec": 3.25, "endSec": 3.55, "phoneme": "D" },
+            { "startSec": 3.55, "endSec": 3.85, "phoneme": "F" },
+            { "startSec": 3.85, "endSec": 4.2, "phoneme": "E" },
+            { "startSec": 4.2, "endSec": 4.4, "phoneme": "X" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_2_relief",
+      "title": "02. Wire Cut & Relief",
+      "durationSec": 3.5,
+      "background": "laboratory",
+      "transitionIn": "fade",
+      "transitionDurationSec": 0.35,
+      "cameraKeyframes": [
+        { "timeSec": 0, "zoom": 1.15, "panX": 0, "panY": 0, "shake": 0 },
+        { "timeSec": 2.0, "zoom": 1.0, "panX": 0, "panY": 0, "shake": 0 }
+      ],
+      "actors": [
+        {
+          "id": "actor_officer",
+          "characterId": "char_police_officer",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.35, "y": 0.85, "scale": 1.0, "facing": 1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 1.2, "basePose": "stand", "type": "shrug", "intensity": 0.8 },
+            { "startSec": 1.2, "endSec": 3.5, "basePose": "stand", "type": "celebrate", "intensity": 1.0 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "surprised": 0.5, "nervous": 0.3 } },
+            { "timeSec": 1.2, "emotion": { "happy": 0.9, "excited": 0.75, "confident": 0.6 } }
+          ]
+        },
+        {
+          "id": "actor_scientist",
+          "characterId": "char_lab_scientist",
+          "positionKeyframes": [
+            { "timeSec": 0, "x": 0.72, "y": 0.83, "scale": 0.98, "facing": -1 }
+          ],
+          "actionTracks": [
+            { "startSec": 0, "endSec": 3.5, "basePose": "stand", "type": "clap", "intensity": 0.9 }
+          ],
+          "emotionKeyframes": [
+            { "timeSec": 0, "emotion": { "happy": 0.85, "excited": 0.65 } }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "prop_bomb",
+          "type": "bomb_device",
+          "position": { "x": 0.52, "y": 0.85 },
+          "scale": 1.15,
+          "state": { "countdownSeconds": 7, "armed": false, "wiresCut": [1] }
+        }
+      ],
+      "dialogue": [
+        {
+          "id": "line_3",
+          "actorId": "actor_officer",
+          "speakerName": "Officer Miller",
+          "text": "Timer stopped! Never making me guess colors again.",
+          "startSec": 0.4,
+          "endSec": 3.2,
+          "phonemes": [
+            { "startSec": 0.4, "endSec": 0.7, "phoneme": "B" },
+            { "startSec": 0.7, "endSec": 1.05, "phoneme": "D" },
+            { "startSec": 1.05, "endSec": 1.4, "phoneme": "A" },
+            { "startSec": 1.4, "endSec": 1.8, "phoneme": "E" },
+            { "startSec": 1.8, "endSec": 2.2, "phoneme": "C" },
+            { "startSec": 2.2, "endSec": 2.6, "phoneme": "H" },
+            { "startSec": 2.6, "endSec": 3.0, "phoneme": "B" },
+            { "startSec": 3.0, "endSec": 3.2, "phoneme": "X" }
+          ]
+        }
+      ]
+    }
+  ]
+}
